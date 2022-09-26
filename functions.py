@@ -59,19 +59,41 @@ print(get_book_property("title", books[0]))
 # return a new list of unavailable books
 
 
-def calculate_not_available_books(books):
-    ...
+def calculate_not_available_booknames(books):  # This function returns a list of unavailable book names
+    available_books = []
+    for book in books:
+        if not book["available"]:
+            available_books.append(book["title"])
+    return available_books
+
+
+print(calculate_not_available_booknames(books))
+
+def calculate_not_available_books(books):  # This function returns a list of unavailable book dictionaries
+    available_books = []
+    for book in books:
+        if not book["available"]:
+            available_books.append(book)
+    return available_books
 
 
 print(calculate_not_available_books(books))
+
 
 # CHALLENGE 3
 # get_book_by_author_name(author_name, books)
 # receives a author name (string)
 # recieves a list of book dictionaries
 # returns the book dictionary that contains an author with the author name provided
-def get_book_by_author_name(author_name, books):
-    ...
 
+def get_book_by_author_name(author_name, books):
+    books_by_author = [] 
+    for book in books:
+        authors = book["authors"]
+        for author in authors:
+            if author["name"] == author_name:
+                books_by_author.append(book)
+    
+    return books_by_author
 
 print(get_book_by_author_name("Neil Gaiman", books))
