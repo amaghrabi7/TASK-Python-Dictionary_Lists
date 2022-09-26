@@ -1,6 +1,6 @@
 from books import books
 
-print(books[0])
+print("\n", books[0])
 #  number_of_authors(book)
 #  recieves a book dictionary
 #  returns the number of authors that the book has
@@ -8,7 +8,7 @@ def number_of_authors(book):
     return len(book["authors"])
 
 
-print(number_of_authors(books[0]))
+print("\n", number_of_authors(books[0]))
 
 #  get_book_by_id(book_id, books)
 #  # receives a book id
@@ -20,7 +20,7 @@ def get_book_by_id(book_id, books):
             return book
 
 
-print(get_book_by_id(38, books))
+print("\n", get_book_by_id(38, books))
 
 
 # add_summary_to_book(summary, book)
@@ -33,7 +33,7 @@ def add_summary_to_book(summary, book):
     return book
 
 
-print(add_summary_to_book("this is a good book about", books[0]))
+print("\n", add_summary_to_book("this is a good book about", books[0]))
 
 
 # CHALLENGE 1
@@ -49,8 +49,8 @@ def get_book_property(property, book):
             return book[property]
 
 
-print(get_book_property("color", books[0]))
-print(get_book_property("title", books[0]))
+print("\n", get_book_property("color", books[0]))
+print("\n", get_book_property("title", books[0]))
 
 
 # CHALLENGE 2
@@ -67,7 +67,7 @@ def calculate_not_available_booknames(books):  # This function returns a list of
     return available_books
 
 
-print(calculate_not_available_booknames(books))
+print("\n", calculate_not_available_booknames(books))
 
 def calculate_not_available_books(books):  # This function returns a list of unavailable book dictionaries
     available_books = []
@@ -77,7 +77,7 @@ def calculate_not_available_books(books):  # This function returns a list of una
     return available_books
 
 
-print(calculate_not_available_books(books))
+print("\n", calculate_not_available_books(books))
 
 
 # CHALLENGE 3
@@ -96,4 +96,4 @@ def get_book_by_author_name(author_name, books):
     
     return books_by_author
 
-print(get_book_by_author_name("Neil Gaiman", books))
+print("\n", get_book_by_author_name("Neil Gaiman", books))
