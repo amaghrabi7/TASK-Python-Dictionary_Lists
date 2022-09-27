@@ -44,9 +44,7 @@ print("\n", add_summary_to_book("this is a good book about", books[0]))
 
 
 def get_book_property(property, book):
-    for key in book:
-        if key == property:
-            return book[property]
+    return book[property]
 
 
 print("\n", get_book_property("color", books[0]))
@@ -60,21 +58,21 @@ print("\n", get_book_property("title", books[0]))
 
 
 def calculate_not_available_booknames(books):  # This function returns a list of unavailable book names
-    available_books = []
+    unavailable_books = []
     for book in books:
         if not book["available"]:
-            available_books.append(book["title"])
-    return available_books
+            unavailable_books.append(book["title"])
+    return unavailable_books
 
 
 print("\n", calculate_not_available_booknames(books))
 
 def calculate_not_available_books(books):  # This function returns a list of unavailable book dictionaries
-    available_books = []
+    unavailable_books = []
     for book in books:
         if not book["available"]:
-            available_books.append(book)
-    return available_books
+            unavailable_books.append(book)
+    return unavailable_books
 
 
 print("\n", calculate_not_available_books(books))
